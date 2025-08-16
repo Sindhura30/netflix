@@ -1,22 +1,17 @@
-import { useState } from 'react'
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Login } from './components/Login';
 
+import './App.css';
+import { Provider } from 'react-redux';
+import store from './utils/store';
+//import { useNavigate } from 'react-router-dom';
+import { AppContent } from './components/AppContent';
+
+// Root App component with Redux Provider
 function App() {
   return (
-    <>
-    <BrowserRouter>
-      <div className='text-3xl font-bold text-blue-500 bg-gradient-to-b from-black p-5'>
-        <Header />
-        <Routes>
-            <Route path='/login' element={<Login />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-    </>
-  )
+    <Provider store={store}>
+      <AppContent />
+    </Provider>
+  );
 }
 
 export default App

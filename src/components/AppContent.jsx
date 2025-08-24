@@ -9,7 +9,7 @@ export const AppContent = () => {
 
   return (
     <BrowserRouter>
-      <div className="text-3xl font-bold text-blue-500 bg-gradient-to-b from-black p-5">
+      <div className="bg-gradient-to-b from-black p-5">
         <Header />
         <Routes>
           <Route path="/" element={<Login />} />

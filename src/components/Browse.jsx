@@ -1,8 +1,13 @@
+import { useNowPlayingMovies } from "../hooks/useNowPlayingMovies";
+import Trailer from "./Trailer";
+import Container from "./Container";
+
 export const Browse = () => {
+    useNowPlayingMovies();  
     return (
-        <div>
-            <h1>Browse</h1>
+        <div className="w-full relative">
+            <Trailer/>
+            <Container/>
         </div>
     )
 }
-

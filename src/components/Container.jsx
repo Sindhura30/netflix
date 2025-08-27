@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
 
 const Container = () => {
-    const nowPlayingMovies = useSelector((state) => state.movies?.nowPlayingMovies); 
+    const topRatedMovies = useSelector((state) => state.movies?.topRatedMovies); 
     
-    const {title = '', overview = ''} = nowPlayingMovies?.[0] || {};    
+    const {title = '', overview = ''} = topRatedMovies?.[0] || {};    
 
     return (
-        <div className="w-full absolute text-white top-1/5 p-6 background-gradient-to-r from-black">
+        <div className="w-full absolute text-white top-2/12 p-6 background-gradient-to-r from-black">
             <h1 className="text-5xl font-bold pb-5">{title}</h1>
             <p className="text-xl w-2xl pb-5">{overview}</p>
             <div className="flex gap-4">

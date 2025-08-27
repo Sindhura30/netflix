@@ -5,7 +5,7 @@ import { addTrailer } from "../utils/moviesSlice";
 
 export const useTrailerVideo = () => {
 
-const nowPlayingMovies = useSelector((state) => state.movies?.nowPlayingMovies); 
+const topRatedMovies = useSelector((state) => state.movies?.topRatedMovies); 
 const dispatch = useDispatch();
 
 const trailerVideo = useSelector((state) => state.movies?.trailerVideo);
@@ -22,8 +22,8 @@ const getTrailer = async (movieId) => {
 
 useEffect(() => {
     const fetchTrailer = async () => {
-        if (nowPlayingMovies && nowPlayingMovies.length > 0) {
-            const movieId = nowPlayingMovies[0]?.id;
+        if (topRatedMovies && topRatedMovies.length > 0) {
+            const movieId = topRatedMovies[0]?.id;
             if (movieId) {
                 const trailerData = await getTrailer(movieId);
                 if (trailerData && trailerData.results) {
@@ -38,7 +38,7 @@ useEffect(() => {
     };
     
     fetchTrailer();
-}, [nowPlayingMovies]);
+}, [topRatedMovies]);
 
 return trailerVideo;
 };

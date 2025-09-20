@@ -58,7 +58,7 @@ export const Login = () => {
   };
 
   return (
-    <div className="w-4/12 my-30 mx-auto bg-black text-white rounded-md p-5 opacity-80">
+    <div className="w-full max-w-md mx-auto my-12 sm:my-20 bg-black text-white rounded-md p-4 sm:p-8 opacity-90 shadow-lg flex flex-col justify-center">
       <form onSubmit={(e) => e.preventDefault()} className="text-sm">
         <h1 className="text-xl">{showSignIn ? "Sign In" : "Sign Up"} </h1>
         <input

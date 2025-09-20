@@ -5,8 +5,10 @@ export const API_OPTIONS = {
     method: 'GET', 
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OTYzYzk0MTk5OGQ3NTYyMTJmNGYzYTI5MzQ4YjRkMiIsIm5iZiI6MTc1NTM1MTIwMS4xNTEsInN1YiI6IjY4YTA4OGExZDljNWJlODEwMzYxYmI1YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Fo5UfYa7YggtZgABUimikS8Os4FpgVB7EUtE2peVGFU'
+        Authorization: 'Bearer ' + import.meta.env.VITE_TMDB_API_KEY
     }
 };
 
-export const IMG_CDN = 'https://image.tmdb.org/t/p/w500'
+export const IMG_CDN = 'https://image.tmdb.org/t/p/w500';
+
+export const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_KEY

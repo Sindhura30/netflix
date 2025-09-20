@@ -4,7 +4,7 @@ const MovieList = ({title, movies}) =>{
     return (
         <div className="w-full">
         <h2 className="text-white text-2xl pb-1.5">{title}</h2>
-        <div className="flex gap-4 overflow-x-auto">
+        <div className="flex gap-3 sm:gap-4 overflow-x-auto py-2" >
             {movies && movies.map((movie) => {
                 return <MovieCard className="flex-shrink-0" key={movie.id} movie={movie}/>
             })}
